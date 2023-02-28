@@ -5,6 +5,7 @@
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: #BC1340;
+  border-color: #E0003C;
 }
 
 .btn-outline-primary {
@@ -12,8 +13,12 @@
   border-color: #E0003C;
 }
 
-a, a:hover, a:focus {
-  background-color: #E0003C;
+a, a:focus, a:hover {
+  color: #E0003C;
+}
+
+a.text-dark:focus, a.text-dark:hover {
+  color: #E0003C !important;
 }
 
 .card {
@@ -21,15 +26,14 @@ a, a:hover, a:focus {
   border-radius: 1rem;
 }
 
-.card-header {
+.card-header, .card-footer {
   background-color: #E0003C;
   border-radius: 1rem;
-  border-bottom: 1px solid #E0003C;
   color: white;
 }
 
 .card-header:first-child {
-
+  border-radius: calc(1rem - 1.5px) calc(1rem - 1.5px) 0 0;
 }
 .card-body {
   border-radius: 1rem;
@@ -37,4 +41,12 @@ a, a:hover, a:focus {
 
 .text-muted {
   color: #8C8C8C;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #E0003C !important;
+}
+
+.border-top {
+  border-top: 1px solid #E0003C !important;
 }
