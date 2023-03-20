@@ -16,15 +16,15 @@
   </form>
 
   <h1>Cookies</h1>
-  <button onclick="showCookies()">Show me the cookies</button>
+  <button onclick="showCookies()">Show me Cookies!</button>
   <hr>
 
   <script type="text/javascript">
     function setCookies() {
       let firstname = document.getElementById("firstname").value;
       let email = document.getElementById("email").value;
-      document.cookie = "firstname=" + firstname;
-      document.cookie = "email=" + email;
+      document.cookie = 'firstname=${firstname}; path=/';
+      document.cookie = 'email=${email}; path=/';
     }
 
     function showCookies() {

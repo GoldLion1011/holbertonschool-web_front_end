@@ -16,19 +16,23 @@
   </form>
 
   <h1>Cookies</h1>
-  <button onclick="showCookies()">Show me the cookies</button>
+  <button onclick="showCookies()">Show me Cookies!</button>
   <hr>
 
   <script type="text/javascript">
     function setCookies() {
       let firstname = document.getElementById("firstname").value;
       let email = document.getElementById("email").value;
-      document.cookie = "firstname=" + firstname;
-      document.cookie = "email=" + email;
+
+      let date = new Date(Date.now() + (10*24*60*60*1000)); // Set to expire cookies in 10 days
+      date = date.toUTCString(); // "Thu, 01 Jan 1970 00:00:00 GMT"
+
+      document.cookie = 'firstname=${firstname}; expires=${date}; path=/';
+      document.cookie = 'email=${email}; expires=${date}; path=/';
     }
 
     function showCookies() {
-      let p = document.createElement("p");
+      let p = document.createElement("p").innerHTML = document.cookie;
       document.body.append(p);
     }
 
